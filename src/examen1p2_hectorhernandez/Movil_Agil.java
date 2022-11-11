@@ -20,6 +20,13 @@ public class Movil_Agil extends Robot {
         this.velocidad_punta = velocidad_punta;
     }
 
+    public Movil_Agil(int cant_llantas, double velocidad_punta, int id, int x, int y, String fabricacion) {
+        super(id, x, y, fabricacion);
+        this.cant_llantas = cant_llantas;
+        this.velocidad_punta = velocidad_punta;
+    }
+    
+
     public int getCapacidad() {
         return capacidad;
     }
@@ -46,7 +53,7 @@ public class Movil_Agil extends Robot {
 
     @Override
     public String toString() {
-        return "Movil_Agil{" + "capacidad=" + capacidad + ", cant_llantas=" + cant_llantas + ", velocidad_punta=" + velocidad_punta + '}';
+        return super.toString()+"Movil_Agil{" + "capacidad=" + capacidad + ", cant_llantas=" + cant_llantas + ", velocidad_punta=" + velocidad_punta + '}';
     }
     
     

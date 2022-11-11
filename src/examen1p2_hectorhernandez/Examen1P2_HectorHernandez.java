@@ -27,23 +27,15 @@ public class Examen1P2_HectorHernandez {
             switch (opcionMenu) {
                 case 1: {
                     Robot e = new Robot();
-                    int pos = lista.size() - 1;
-
+                    int pos = 0;
                     System.out.print("Ingrese el ID del Robot: ");
                     int id = lea.nextInt();
-                    ((Robot) lista.get(pos)).setId(id);
-
                     System.out.print("Ingrese la posicion en X: ");
                     int x = lea.nextInt();
-                    ((Robot) lista.get(pos)).setX(x);
-
                     System.out.print("Ingrese la posicion en Y: ");
                     int y = lea.nextInt();
-                    ((Robot) lista.get(pos)).setY(y);
-
                     System.out.print("Ingrese el año de fabricación: ");
-                    String fabricacion = lea.nextLine();
-                    ((Robot) lista.get(pos)).setFabricacion(fabricacion);
+                    String fabricacion = lea.next();
 
                     boolean centinela = true;
                     while (centinela == true) {
@@ -61,35 +53,32 @@ public class Examen1P2_HectorHernandez {
                                 System.out.println("===== Androide =====");
                                 System.out.print("Ingrese la altura: ");
                                 double altura = lea.nextDouble();
-                                ((Androide) lista.get(pos)).setAltura(altura);
                                 System.out.print("Ingrese el peso: ");
                                 double peso = lea.nextDouble();
-                                ((Androide) lista.get(pos)).setPeso(peso);
+                                lista.add(new Androide(altura, peso, id, x, y, fabricacion));
                             }
                             break;
                             case 2: {
                                 System.out.println("===== Manos Robóticas =====");
                                 System.out.print("Ingrese el numero de Servo Motores: ");
                                 int num_servomotores = lea.nextInt();
-                                ((Mano_Robotica) lista.get(pos)).setNum_servomotores(num_servomotores);
+                                lista.add(new Mano_Robotica(num_servomotores, id, x, y, fabricacion));
                             }
                             break;
                             case 3: {
                                 System.out.println("===== Móviles Ágiles =====");
                                 System.out.print("Ingrese la cantidad de llantas: ");
                                 int cant_llantas = lea.nextInt();
-                                ((Movil_Agil) lista.get(pos)).setCant_llantas(cant_llantas);
-
                                 System.out.print("Ingrese la velocidad punta: ");
                                 double velocidad_punta = lea.nextDouble();
-                                ((Movil_Agil) lista.get(pos)).setVelocidad_punta(velocidad_punta);
+                                lista.add(new Movil_Agil(cant_llantas, velocidad_punta, id, x, y, fabricacion));
                             }
                             break;
                             case 4: {
                                 System.out.println("===== Móviles Pesados =====");
                                 System.out.print("Ingrese el peso: ");
                                 double peso = lea.nextDouble();
-                                ((Movil_Pesado) lista.get(pos)).setPeso(peso);
+                                lista.add(new Movil_Pesado(peso, id, x, y, fabricacion));
                             }
                             break;
                             case 5: {
@@ -104,7 +93,14 @@ public class Examen1P2_HectorHernandez {
                 }
                 break;
                 case 2: {
-
+                    for (Robot t : lista) {
+                        String salida = "";
+                        if (t instanceof Robot) {
+                            String mensaje = String.format("%d %s%n", lista.indexOf(t), t);
+                            salida += mensaje;
+                        }
+                        System.out.println(lista);
+                    }
                 }
                 break;
                 case 3: {

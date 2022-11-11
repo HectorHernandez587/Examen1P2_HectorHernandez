@@ -20,6 +20,14 @@ public class Androide extends Robot {
         this.peso = peso;
     }
 
+    public Androide(double altura, double peso, int id, int x, int y, String fabricacion) {
+        super(id, x, y, fabricacion);
+        this.altura = altura;
+        this.peso = peso;
+    }
+    
+    
+
     public int getCapacidad() {
         return capacidad;
     }

@@ -18,6 +18,13 @@ public class Movil_Pesado extends Robot {
         this.peso = peso;
     }
 
+    public Movil_Pesado(double peso, int id, int x, int y, String fabricacion) {
+        super(id, x, y, fabricacion);
+        this.peso = peso;
+    }
+    
+    
+
     public int getCapacidad() {
         return capacidad;
     }
@@ -36,7 +43,7 @@ public class Movil_Pesado extends Robot {
 
     @Override
     public String toString() {
-        return "Movil_Pesado{" + "capacidad=" + capacidad + ", peso=" + peso + '}';
+        return super.toString()+"Movil_Pesado{" + "capacidad=" + capacidad + ", peso=" + peso + '}';
     }
     
     

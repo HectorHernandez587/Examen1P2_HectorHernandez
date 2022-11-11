@@ -22,6 +22,15 @@ public class Robot {
         this.fabricacion = fabricacion;
     }
 
+    public Robot(int id, int x, int y, String fabricacion) {
+        this.id = id;
+        this.x = x;
+        this.y = y;
+        this.fabricacion = fabricacion;
+    }
+    
+    
+
     public int getId() {
         return id;
     }

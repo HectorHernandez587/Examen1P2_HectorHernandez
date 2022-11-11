@@ -18,6 +18,12 @@ public class Mano_Robotica extends Robot {
         this.num_servomotores = num_servomotores;
     }
 
+    public Mano_Robotica(int num_servomotores, int id, int x, int y, String fabricacion) {
+        super(id, x, y, fabricacion);
+        this.num_servomotores = num_servomotores;
+    }
+    
+
     public int getCapacidad() {
         return capacidad;
     }
@@ -36,7 +42,7 @@ public class Mano_Robotica extends Robot {
 
     @Override
     public String toString() {
-        return "Mano_Robotica{" + "capacidad=" + capacidad + ", num_servomotores=" + num_servomotores + '}';
+        return super.toString()+"Mano_Robotica{" + "capacidad=" + capacidad + ", num_servomotores=" + num_servomotores + '}';
     }
     
     
