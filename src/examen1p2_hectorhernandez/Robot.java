@@ -42,7 +42,9 @@ public abstract class Robot implements Metodos_Movimiento {
     }
 
     public void setX(int x) {
-        this.x = x;
+        if(x > 0 && x <= 8){
+            this.x = x;
+        } 
     }
 
     public int getY() {
@@ -50,7 +52,9 @@ public abstract class Robot implements Metodos_Movimiento {
     }
 
     public void setY(int y) {
-        this.y = y;
+        if(y > 0 && y <= 8){
+            this.y = y;
+        } 
     }
 
     public boolean isEstado_carga() {

@@ -8,9 +8,11 @@ public class Examen1P2_HectorHernandez {
 
     static Scanner lea = new Scanner(System.in);
     static Random r = new Random();
+    static ArrayList<Robot> lista = new ArrayList();
+    static Robot p;
 
     public static void main(String[] args) {
-        ArrayList<Robot> lista = new ArrayList();
+        
         boolean bandera = true;
         while (bandera == true) {
             System.out.println("=========== MENU ===========");
@@ -152,6 +154,10 @@ public class Examen1P2_HectorHernandez {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print("[" + matriz[i][j] + "]" + " ");
+                
+                if (p != null && i == p.getX() && j == p.getY()){
+                    System.out.println("R");
+                }
             }
             System.out.println();
         }

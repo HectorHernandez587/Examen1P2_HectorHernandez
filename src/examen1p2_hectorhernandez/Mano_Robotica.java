@@ -45,9 +45,21 @@ public class Mano_Robotica extends Robot {
         return super.toString()+"Mano_Robotica{" + "capacidad=" + capacidad + ", num_servomotores=" + num_servomotores + '}';
     }
     
-    public int mov (int x1, int y1, int x2, int y2){
-       
-        return 0;
+    public int[] mov(Object[][] matriz, int x1, int y1, int x2, int y2) {
+        int[] pos = new int[2];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[x2][y2] == "X") {
+
+                } else if (matriz[x2][y2] == " " || matriz[x2][y2] == "C") {
+                    x1 = x2;
+                    y1 = y2;
+                    pos[0] = x1;
+                    pos[1] = y2;
+                }
+            }
+        }
+        return pos;
     }
     public void mnt(){
         

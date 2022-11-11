@@ -9,5 +9,4 @@ public interface Metodos_Movimiento {
     public void mnt();
     public void unmnt();
     public int rot (int degrees, char or);
-    
 }
