@@ -10,7 +10,6 @@ public class Examen1P2_HectorHernandez {
     static Random r = new Random();
 
     public static void main(String[] args) {
-        // TODO code application logic here
         ArrayList<Robot> lista = new ArrayList();
         boolean bandera = true;
         while (bandera == true) {
@@ -26,10 +25,7 @@ public class Examen1P2_HectorHernandez {
 
             switch (opcionMenu) {
                 case 1: {
-                    Robot e = new Robot();
-                    int pos = 0;
-                    System.out.print("Ingrese el ID del Robot: ");
-                    int id = lea.nextInt();
+                    int id = r.nextInt(1000000);
                     System.out.print("Ingrese la posicion en X: ");
                     int x = lea.nextInt();
                     System.out.print("Ingrese la posicion en Y: ");
@@ -93,13 +89,13 @@ public class Examen1P2_HectorHernandez {
                 }
                 break;
                 case 2: {
+                    String salida = "";
                     for (Robot t : lista) {
-                        String salida = "";
                         if (t instanceof Robot) {
                             String mensaje = String.format("%d %s%n", lista.indexOf(t), t);
                             salida += mensaje;
                         }
-                        System.out.println(lista);
+                        System.out.println(salida);
                     }
                 }
                 break;

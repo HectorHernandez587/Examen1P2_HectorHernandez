@@ -45,6 +45,20 @@ public class Mano_Robotica extends Robot {
         return super.toString()+"Mano_Robotica{" + "capacidad=" + capacidad + ", num_servomotores=" + num_servomotores + '}';
     }
     
+    public int mov (int x1, int y1, int x2, int y2){
+       
+        return 0;
+    }
+    public void mnt(){
+        
+    }
+    public void unmnt(){
+        
+    }
+    public int rot (int degrees, char or){
+        
+        return 0;
+    }
     
     
     

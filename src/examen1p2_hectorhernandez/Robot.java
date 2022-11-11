@@ -4,7 +4,7 @@ package examen1p2_hectorhernandez;
  *
  * @author Hector
  */
-public class Robot {
+public abstract class Robot implements Metodos_Movimiento {
     private int id;
     private int x;
     private int y;
@@ -28,8 +28,6 @@ public class Robot {
         this.y = y;
         this.fabricacion = fabricacion;
     }
-    
-    
 
     public int getId() {
         return id;

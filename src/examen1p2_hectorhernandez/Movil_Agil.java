@@ -56,7 +56,20 @@ public class Movil_Agil extends Robot {
         return super.toString()+"Movil_Agil{" + "capacidad=" + capacidad + ", cant_llantas=" + cant_llantas + ", velocidad_punta=" + velocidad_punta + '}';
     }
     
-    
+    public int mov (int x1, int y1, int x2, int y2){
+       
+        return 0;
+    }
+    public void mnt(){
+        
+    }
+    public void unmnt(){
+        
+    }
+    public int rot (int degrees, char or){
+        
+        return 0;
+    }
     
     
     
