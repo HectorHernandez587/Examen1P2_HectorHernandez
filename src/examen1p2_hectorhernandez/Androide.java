@@ -31,7 +31,9 @@ public class Androide extends Robot {
     }
 
     public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
+        if (capacidad > 0 && capacidad <= 2) {
+            this.capacidad = capacidad;
+        }
     }
 
     public double getAltura() {

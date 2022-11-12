@@ -154,8 +154,8 @@ public class Examen1P2_HectorHernandez {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print("[" + matriz[i][j] + "]" + " ");
-                
-                if (p != null && i == p.getX() && j == p.getY()){
+
+                if (p != null && i == p.getX() && j == p.getY()) {
                     System.out.println("R");
                 }
             }

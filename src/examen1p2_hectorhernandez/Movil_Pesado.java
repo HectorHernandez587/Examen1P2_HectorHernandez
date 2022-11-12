@@ -30,7 +30,9 @@ public class Movil_Pesado extends Robot {
     }
 
     public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
+        if (capacidad >= 5) {
+            this.capacidad = capacidad;
+        }
     }
 
     public double getPeso() {

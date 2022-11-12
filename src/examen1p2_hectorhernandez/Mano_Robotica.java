@@ -29,7 +29,10 @@ public class Mano_Robotica extends Robot {
     }
 
     public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
+        if (capacidad == 1) {
+            this.capacidad = capacidad;
+        }
+        
     }
 
     public int getNum_servomotores() {
