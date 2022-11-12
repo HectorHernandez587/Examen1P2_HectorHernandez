@@ -12,7 +12,7 @@ public class Examen1P2_HectorHernandez {
     static Robot p;
 
     public static void main(String[] args) {
-        
+
         boolean bandera = true;
         while (bandera == true) {
             System.out.println("=========== MENU ===========");
@@ -28,6 +28,7 @@ public class Examen1P2_HectorHernandez {
             switch (opcionMenu) {
                 case 1: {
                     int id = r.nextInt(1000000);
+
                     System.out.print("Ingrese la posicion en X: ");
                     int x = lea.nextInt();
                     System.out.print("Ingrese la posicion en Y: ");
@@ -91,28 +92,107 @@ public class Examen1P2_HectorHernandez {
                 }
                 break;
                 case 2: {
-                    String salida = "";
-                    for (Robot t : lista) {
-                        if (t instanceof Robot) {
-                            String mensaje = String.format("%d %s%n", lista.indexOf(t), t);
-                            salida += mensaje;
+                    try {
+                        String salida = "";
+                        for (Robot t : lista) {
+                            if (t instanceof Robot) {
+                                String mensaje = String.format("%d %s%n", lista.indexOf(t), t);
+                                salida += mensaje;
+                            }
+                            System.out.println(salida);
                         }
-                        System.out.println(salida);
+                    } catch (Exception e) {
+                        System.out.println("Tiene que crear robots primero!");
                     }
                 }
                 break;
                 case 3: {
-                    Object[][] matriz = new Object[8][8];
-                    System.out.println("===== MAPA =====");
-                    Imprimir(Lectura());
-                    System.out.println("================");
+                    try {
+                        boolean monolito = true;
+                        while (monolito == true) {
+                            System.out.println("===== Simulación Automática =====");
+                            System.out.println("1) Androide");
+                            System.out.println("2) Móviles Ágiles");
+                            System.out.println("3) Moviles Pesados");
+                            System.out.println("Ingrese el robot para simular: ");
+                            int op = lea.nextInt();
+
+                            switch (op) {
+                                case 1: {
+
+                                }
+                                break;
+                                case 2: {
+
+                                }
+                                break;
+                                case 3: {
+
+                                }
+                                break;
+                                case 4: {
+                                    monolito = false;
+                                }
+                                break;
+                                default: {
+                                    System.out.println("Esa opcion no esta disponible");
+                                }
+                            }//Fin Switch
+                        }//Fin while
+
+                        Object[][] matriz = new Object[8][8];
+                        System.out.println("===== MAPA =====");
+                        Imprimir(Lectura());
+                        System.out.println("================");
+
+                    } catch (Exception e) {
+                        System.out.println("Tiene que crear Robots primero!");
+                    }
+
                 }
                 break;
                 case 4: {
-                    Object[][] matriz = new Object[8][8];
-                    System.out.println("===== MAPA =====");
-                    Imprimir(Lectura());
-                    System.out.println("================");
+                    try {
+                        boolean monolito = true;
+                        while (monolito == true) {
+                            System.out.println("===== Actuar Manualmente =====");
+                            System.out.println("1) Androide");
+                            System.out.println("2) Manos Robóticas");
+                            System.out.println("3) Moviles Pesados");
+                            System.out.println("Ingrese el robot para actuar manualmente: ");
+                            int op = lea.nextInt();
+
+                            switch (op) {
+                                case 1: {
+
+                                }
+                                break;
+                                case 2: {
+
+                                }
+                                break;
+                                case 3: {
+
+                                }
+                                break;
+                                case 4: {
+                                    monolito = false;
+                                }
+                                break;
+                                default: {
+                                    System.out.println("Esa opcion no esta disponible");
+                                }
+                            }//Fin Switch
+                        }//Fin while
+
+                        Object[][] matriz = new Object[8][8];
+                        System.out.println("===== MAPA =====");
+                        Imprimir(Lectura());
+                        System.out.println("================");
+
+                    } catch (Exception e) {
+                        System.out.println("Tiene que crear Robots primero!");
+                    }
                 }
                 break;
                 case 5: {

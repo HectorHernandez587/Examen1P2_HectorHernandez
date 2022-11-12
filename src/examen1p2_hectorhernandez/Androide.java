@@ -73,11 +73,27 @@ public class Androide extends Robot {
         }
         return pos;
     }
-    public void mnt(){
-        
+    public void mnt(Object [][] matriz, int x, int y){
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[x][y] == "C") {
+                    capacidad++;
+                    estado_carga = true;
+                    matriz[x][y] = " ";
+                }
+            }
+        }
     }
-    public void unmnt(){
-        
+    public void unmnt(Object [][] matriz, int x, int y){
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[x][y] == "D") {
+                    capacidad--;
+                    estado_carga = false;
+                    matriz[x][y] = " ";
+                }
+            }
+        }
     }
     public int rot (int degrees, char or){
         

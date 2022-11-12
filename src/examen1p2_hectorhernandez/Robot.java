@@ -5,11 +5,11 @@ package examen1p2_hectorhernandez;
  * @author Hector
  */
 public abstract class Robot implements Metodos_Movimiento {
-    private int id;
-    private int x;
-    private int y;
-    private boolean estado_carga;
-    private String fabricacion;
+    int id;
+    int x;
+    int y;
+    boolean estado_carga;
+    String fabricacion;
 
     public Robot() {
     }
