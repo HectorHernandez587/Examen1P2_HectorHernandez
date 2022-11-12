@@ -102,6 +102,7 @@ public class Examen1P2_HectorHernandez {
                             System.out.println(salida);
                         }
                     } catch (Exception e) {
+                        System.out.println("Error");
                         System.out.println("Tiene que crear robots primero!");
                     }
                 }
