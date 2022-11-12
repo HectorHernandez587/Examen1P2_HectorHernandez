@@ -5,6 +5,7 @@ package examen1p2_hectorhernandez;
  * @author Hector
  */
 public class Movil_Agil extends Robot {
+
     private int capacidad;
     private int cant_llantas;
     private double velocidad_punta;
@@ -25,7 +26,6 @@ public class Movil_Agil extends Robot {
         this.cant_llantas = cant_llantas;
         this.velocidad_punta = velocidad_punta;
     }
-    
 
     public int getCapacidad() {
         return capacidad;
@@ -55,26 +55,23 @@ public class Movil_Agil extends Robot {
 
     @Override
     public String toString() {
-        return super.toString()+"Movil_Agil{" + "capacidad=" + capacidad + ", cant_llantas=" + cant_llantas + ", velocidad_punta=" + velocidad_punta + '}';
+        return super.toString() + "Movil_Agil{" + "capacidad=" + capacidad + ", cant_llantas=" + cant_llantas + ", velocidad_punta=" + velocidad_punta + '}';
     }
-    
-    public int[] mov(Object[][] matriz, int x1, int y1, int x2, int y2) {
-        int[] pos = new int[2];
+
+    public void mov(Object[][] matriz, int x1, int y1, int x2, int y2) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[x2][y2] == "X") {
 
                 } else if (matriz[x2][y2] == " " || matriz[x2][y2] == "C") {
-                    x1 = x2;
-                    y1 = y2;
-                    pos[0] = x1;
-                    pos[1] = y2;
+                    x = x2;
+                    y = y2;
                 }
             }
         }
-        return pos;
     }
-    public void mnt(Object [][] matriz, int x, int y){
+
+    public void mnt(Object[][] matriz, int x, int y) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[x][y] == "C") {
@@ -85,7 +82,8 @@ public class Movil_Agil extends Robot {
             }
         }
     }
-    public void unmnt(Object [][] matriz, int x, int y){
+
+    public void unmnt(Object[][] matriz, int x, int y) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[x][y] == "D") {
@@ -96,11 +94,10 @@ public class Movil_Agil extends Robot {
             }
         }
     }
-    public int rot (int degrees, char or){
-        
-        return 0;
+
+    public void rot(int degrees, char or) {
+
     }
-    
-    
-    
+
+
 }

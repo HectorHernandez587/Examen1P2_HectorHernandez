@@ -114,11 +114,13 @@ public class Examen1P2_HectorHernandez {
                             System.out.println("1) Androide");
                             System.out.println("2) Móviles Ágiles");
                             System.out.println("3) Moviles Pesados");
+                            System.out.println("4) Salir");
                             System.out.println("Ingrese el robot para simular: ");
                             int op = lea.nextInt();
 
                             switch (op) {
                                 case 1: {
+                                    
 
                                 }
                                 break;
@@ -159,6 +161,7 @@ public class Examen1P2_HectorHernandez {
                             System.out.println("1) Androide");
                             System.out.println("2) Manos Robóticas");
                             System.out.println("3) Moviles Pesados");
+                            System.out.println("4) Salir");
                             System.out.println("Ingrese el robot para actuar manualmente: ");
                             int op = lea.nextInt();
 

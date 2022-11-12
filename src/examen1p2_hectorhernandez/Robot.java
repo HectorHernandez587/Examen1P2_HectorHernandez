@@ -5,6 +5,7 @@ package examen1p2_hectorhernandez;
  * @author Hector
  */
 public abstract class Robot implements Metodos_Movimiento {
+
     int id;
     int x;
     int y;
@@ -42,9 +43,9 @@ public abstract class Robot implements Metodos_Movimiento {
     }
 
     public void setX(int x) {
-        if(x > 0 && x <= 8){
+        if (x > 0 && x <= 8) {
             this.x = x;
-        } 
+        }
     }
 
     public int getY() {
@@ -52,9 +53,9 @@ public abstract class Robot implements Metodos_Movimiento {
     }
 
     public void setY(int y) {
-        if(y > 0 && y <= 8){
+        if (y > 0 && y <= 8) {
             this.y = y;
-        } 
+        }
     }
 
     public boolean isEstado_carga() {
@@ -77,6 +78,5 @@ public abstract class Robot implements Metodos_Movimiento {
     public String toString() {
         return "Robot{" + "id=" + id + ", x=" + x + ", y=" + y + ", estado_carga=" + estado_carga + ", fabricacion=" + fabricacion + '}';
     }
-    
-    
+
 }
